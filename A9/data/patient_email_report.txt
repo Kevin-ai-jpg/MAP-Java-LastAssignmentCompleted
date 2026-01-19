@@ -1,0 +1,3 @@
+Patient Email Report
+Email: kevin@gmail.com Count: 1
+Email: alin@gmail.com Count: 1

@@ -1,0 +1,3 @@
+Appointment Time Report
+Time: 16:00 Count: 1
+Time: 14:30 Count: 1

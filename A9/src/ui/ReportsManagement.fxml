@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ReportsController">
+   <center>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Generate Reports" />
+
+            <Button fx:id="btnPatientAge" maxWidth="Infinity" text="Patient Age Report" />
+            <Button fx:id="btnPatientName" maxWidth="Infinity" text="Patient Name Report" />
+            <Button fx:id="btnPatientEmail" maxWidth="Infinity" text="Patient Email Report" />
+            <Button fx:id="btnApptDate" maxWidth="Infinity" text="Appointment Date Report" />
+            <Button fx:id="btnApptTime" maxWidth="Infinity" text="Appointment Time Report" />
+        </VBox>
+   </center>
+</BorderPane>

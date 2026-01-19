@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AppointmentManagementController">
+
+    <!-- Top: Filters -->
+    <top>
+        <VBox spacing="10" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Appointment Management" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #f0f0f0; -fx-padding: 10; -fx-background-radius: 5;">
+                <Label text="Filter by:" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="filterDateField" promptText="Date (YYYY-MM-DD)" />
+                <Button fx:id="filterDateButton" text="Filter Date" />
+                <Separator orientation="VERTICAL" />
+                <TextField fx:id="filterTimeField" promptText="Time (HH:MM)" />
+                <Button fx:id="filterTimeButton" text="Filter Time" />
+                <Button fx:id="resetFilterButton" text="Reset / Show All" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="appointmentTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="Appt ID" prefWidth="80" />
+                <TableColumn fx:id="patientIdColumn" text="Patient ID" prefWidth="80" />
+                <TableColumn fx:id="dateColumn" text="Date" prefWidth="150" />
+                <TableColumn fx:id="timeColumn" text="Time" prefWidth="100" />
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox spacing="10" alignment="TOP_CENTER" prefWidth="250">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Appointment Details" style="-fx-font-weight: bold;"/>
+
+            <TextField fx:id="idField" promptText="Appointment ID" />
+            <TextField fx:id="patientIdField" promptText="Patient ID" />
+            <TextField fx:id="dateField" promptText="Date (YYYY-MM-DD)" />
+            <TextField fx:id="timeField" promptText="Time (HH:MM)" />
+
+            <Button fx:id="addButton" text="Add Appointment" maxWidth="Infinity" />
+            <Button fx:id="updateButton" text="Update Appointment" maxWidth="Infinity" />
+            <Button fx:id="deleteButton" text="Delete Appointment" maxWidth="Infinity" />
+            <Button fx:id="undoButton" text="Undo" maxWidth="Infinity" />
+            <Button fx:id="redoButton" text="Redo" maxWidth="Infinity" />
+        </VBox>
+    </right>
+</BorderPane>
